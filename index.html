@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja MDB</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="input-container">
+                <h1 class="input-container__info">Książki do przeczytania</h1>
+                <form action="" id="form" class="input-form">
+                    <div class="input-form__field">
+                        <label class="input-form__label" for="author">Autor książki</label>
+                        <input type="text" class="input-form__text" id="author" name="author" required>
+                    </div>
+
+                    <div class="input-form__field">
+                        <label class="input-form__label" for="title">Tytuł książki</label>
+                        <input type="text" class="input-form__text" id="title" name="title" required>
+                    </div>
+
+                    <div class="input-form__field">
+                        <label class="input-form__label" for="category">Kategoria </label>
+                        <select id="category" class="input-form__select" name="category" required>
+                            <option class="input-form__option" value="">Wybierz kategorie</option>
+                            <option class="input-form__option" value="criminal">Kryminał</option>
+                            <option class="input-form__option" value="sci-fi">Sci-fi</option>
+                            <option class="input-form__option" value="fantasy">Fantasy</option>
+                            <option class="input-form__option" value="drama">Dramat</option>
+                            <option class="input-form__option" value="science">Nauki ścisłe</option>
+                        </select>
+                    </div>
+
+                    <div class="input-form__field">
+                        <fieldset class="input-form__radio">
+                            <legend class="input-form__legend">Priorytet</legend>
+                            <label class="input-form__label"><input type="radio" value="1" name="priority" checked> 1
+                            </label>
+                            <label class="input-form__label"><input type="radio" value="2" name="priority"> 2 </label>
+                            <label class="input-form__label"><input type="radio" value="3" name="priority"> 3 </label>
+                            <label class="input-form__label"><input type="radio" value="4" name="priority"> 4 </label>
+                            <label class="input-form__label"><input type="radio" value="5" name="priority"> 5 </label>
+                        </fieldset>
+                    </div>
+
+                    <input type="submit" class="input-form__btn" value="Dodaj">
+                </form>
+            </div>
+
+            <div class="result-container">
+                <h2 class="result-container__info">Wybrane książki</h2>
+                <div class="result-container__table">
+                    <table id="table">
+                        <!-- <caption>Tabela</caption> -->
+                        <thead>
+                            <tr>
+                                <th>Autor</th>
+                                <th>Tytuł</th>
+                                <th>Kategoria</th>
+                                <th>Priorytet</th>
+                                <th>Usuń</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="book-counter">Liczba książek: <span class="book-counter__number">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
